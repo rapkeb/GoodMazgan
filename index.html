@@ -20,12 +20,30 @@
             text-align: center;
         }
         .container {
-            max-width: 600px;
+            display: flex;
+            max-width: 1000px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            flex: 1;
+        }
+        .image {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        .image img {
+            max-width: 70%; /* Adjust image size */
+            display: block;
+            margin: 0 auto 20px; /* Center image */
+        }
+        .image p {
+            font-size: 150%; /* Adjust text size */
+            margin: 0; /* Reset margin */
         }
         h1, h2, h3 {
             margin-top: 0;
@@ -41,7 +59,7 @@
             margin-bottom: 5px;
         }
         input[type="text"],
-        input[type="email"],
+        input[type="tel"],
         textarea {
             width: 100%;
             padding: 10px;
@@ -57,41 +75,63 @@
             padding: 10px 20px;
             border-radius: 4px;
             cursor: pointer;
+            margin-right: 40%;
         }
         input[type="submit"]:hover {
             background-color: #0056b3;
+        }
+
+        #phone1{
+            font-size:x-large;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .image,
+            .content {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>שירותי מיזוג אוויר בישראל</h1>
-        <p>פנו אלי לכל שאלה או יעוץ: ברק רפקה, 054-4634051</p>
+        <h1>שירותי מיזוג אוויר במרכז הארץ</h1>
+        <p id="phone1">פנו אלי לכל שאלה או יעוץ נהוראי כהן - <a href="tel:0526739036">0526739036</a></p>
     </header>
     <div class="container">
-        <h2>אינך יכול לעמוד בחום? מזל שהגעת למקום הנכון!</h2>
-        <p>אצלנו ב־[שם החברה] אנו מציעים לך את הפתרון האידיאלי לשוב לקרר ולנשום משוב שלו. עם שנות ניסיון בענף, אנו מבינים את הצורך שלך לבית מזוג תקין ויעיל.</p>
-        
-        <h3>מה אנו מציעים:</h3>
-        <ol>
-            <li>התקנה ותחזוקה: צוות המומחים שלנו יבצע התקנה מהירה ומקצועית של מערכת המיזוג שתתאים באופן מושלם לצרכייך.</li>
-            <li>שירות טכני: עם צוות טכנאים מנוסים ומקצועיים שישמחו לסייע בכל בעיה או שאלה שיש לך.</li>
-            <li>אחריות: אנו מעניקים אחריות מורחבת על כל העבודות שלנו, כדי שתוכל להרגיש בטוח בכל שלב של התהליך.</li>
-        </ol>
-        
-        <h3>צרו איתנו קשר עוד היום:</h3>
-        <form action="https://formspree.io/your_email@example.com" method="POST">
-            <label for="name">שם מלא:</label>
-            <input type="text" id="name" name="name" required>
+        <div class="content">
+            <h2>אינך יכול לעמוד בחום? מזל שהגעת למקום הנכון!</h2>
+            <p>אצלנו תמצאו שירות מקצועי לכל סוגי מזגני האלקטרה והתדיראן - מפוצלים, עיליים ומיני מרכזיים. הצוות המנוסה שלנו מתמחה בתיקון מזגנים ישנים, החלפת חלקים, כיוונון וביצוע שירות שנתי.</p>
             
-            <label for="email">כתובת דוא"ל:</label>
-            <input type="email" id="email" name="_replyto" required>
+            <h3>מה אנו מציעים:</h3>
+            <ol>
+                <li>תיקון מזגני אלקטרה ותדיראן - מפוצלים, עיליים ומיני מרכזיים</li>
+                <li>התקנת מזגנים מיני מרכזיים חדשים</li>
+                <li>ניקוי יסודי ותחזוקה מונעת לשמירה על תקינות המזגנים</li>
+                <li>החלפת חלקים וביצוע כיוונונים בהתאם לצורך</li>
+                <li>שירות זמין 24/7 לקריאות חירום</li>
+            </ol>
             
-            <label for="message">הודעה:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            
-            <input type="submit" value="שלח הודעה">
-        </form>
+            <h3>צרו איתנו קשר עוד היום להזמנת שירות:</h3>
+            <form action="https://formspree.io/your_email@example.com" method="POST">
+                <label for="name">שם מלא:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="phone">מספר טלפון:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="message">הודעה:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <input type="submit" value="שלח הודעה">
+            </form>
+        </div>
+        <div class="image">
+            <img src="mazgan.jpeg" alt="שירותי מיזוג אוויר">
+            <p>נשמח לספק לכם שירות מקצועי!</p>
+        </div>
     </div>
-</body>
-</html>
+</body
